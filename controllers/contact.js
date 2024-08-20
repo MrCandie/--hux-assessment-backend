@@ -32,7 +32,7 @@ exports.createContact = catchAsync(async (req, res, next) => {
 
 exports.listContacts = catchAsync(async (req, res) => {
   const contacts = await Contact.find({ userId: req.user.id }).select(
-    "firstName lastName phoneNumber email relationship birthday"
+    "firstName lastName phone email relationship birthday"
   );
 
   return res.status(200).json({

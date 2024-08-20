@@ -14,6 +14,12 @@ const schema = new mongoose.Schema(
       trim: true,
       required: [true, "Kindly provide contact last name"],
     },
+    phone: {
+      type: String,
+      default: "",
+      trim: true,
+      required: [true, "Kindly provide contact phone number"],
+    },
     email: {
       type: String,
       default: "",
